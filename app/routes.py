@@ -1,7 +1,12 @@
 from app import app
+from flask import render_template
 
 @app.route("/")
 
 @app.route("/index")
 def index():
     return "Hello World!"
+
+@app.route("/home")
+def homepage():
+    return render_template('homepage.html', title="Homepage")
